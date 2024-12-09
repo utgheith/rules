@@ -1,6 +1,8 @@
 JVM=graalvm-java21:21
 T = compile fmt publish run test setup-ide
 
+.PHONY: test
+
 all : compile
 
 ${T}: % :
