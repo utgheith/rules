@@ -5,6 +5,7 @@
 //> using publish.organization io.github.utgheith
 //> using publish.name rules
 // using publish.version 0.1.0-SNAPSHOT
+//> using publish.computeVersion git:tag
 //> using publish.repository github:io.github.utgheith/rules
 //> using publish.doc false
 

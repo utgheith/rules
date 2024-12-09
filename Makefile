@@ -7,7 +7,7 @@ ${T}: % :
 	scala-cli --power $@ --jvm ${JVM} .
 
 native:
-	scala-cli --power package --jvm ${JVM} . -o arm -f --native-image --graalvm-jvm-id ${JVM}
+	scala-cli --power package --jvm ${JVM} . -o arm -f --native-image --graalvm-jvm-id ${JVM} .
 
 publish_local:
 	scala-cli --power publish local --jvm ${JVM} .
