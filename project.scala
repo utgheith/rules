@@ -2,8 +2,8 @@
 //> using options -Wall -Wconf:any:e -Wunused:all -feature -deprecation -unchecked -Yexplicit-nulls
 //> using jvm graalvm-java21:21
 
-// using publish.organization io.github.utgheith
-// using publish.name rules
+//> using publish.organization com.github.utgheith
+//> using publish.name rules
 // using publish.computeVersion git:tag
 //> using publish.doc false
 
