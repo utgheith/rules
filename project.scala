@@ -3,8 +3,7 @@
 //> using jvm graalvm-java21:21
 
 //> using publish.organization com.github.utgheith
-//> using publish.name rules
-// using publish.computeVersion git:tag
+//> using publish.name rules_3
 //> using publish.doc false
 
 //> using dep com.lihaoyi::os-lib:0.11.3
