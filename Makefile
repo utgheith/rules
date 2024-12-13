@@ -1,21 +1,10 @@
-JVM=graalvm-java21:21
-T = compile fmt publish run test setup-ide
 
-.PHONY: test
+all : compile;
 
-all : compile
+% : sbt_%;
 
-${T}: % :
-	scala-cli --power $@ --jvm ${JVM} .
+sbt_%:
+	sbt $*
 
-native:
-	scala-cli --power package --jvm ${JVM} . -o arm -f --native-image --graalvm-jvm-id ${JVM} .
-
-publish_local:
-	scala-cli --power publish local --jvm ${JVM} .
-
-
-clean:
-	scala-cli clean .
 
 
