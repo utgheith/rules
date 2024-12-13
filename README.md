@@ -1,3 +1,3 @@
-![CI](https://github.com/utgheith/rules/actions/workflows/makefile.yml/badge.svg)
+![CI](https://github.com/utgheith/rules/actions/workflows/ci.yml/badge.svg)
 
 # rules
