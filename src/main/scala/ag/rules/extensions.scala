@@ -5,13 +5,11 @@ import upickle.default.{ReadWriter, readwriter}
 import java.nio.charset.{Charset, StandardCharsets}
 import java.security.MessageDigest
 import scala.collection.{SortedMap, SortedSet}
-import java.time.{Duration, LocalDateTime}
+import java.time.{Duration, Instant, LocalDateTime, ZoneId, ZonedDateTime}
 import java.time.format.DateTimeFormatter
 import java.util.concurrent.Semaphore
 import java.util.concurrent.atomic.AtomicLong
 import scala.util.control.NonFatal
-import java.time.ZoneId
-import java.time.ZonedDateTime
 
 ///// ReadWriter for SortedMap ////
 
@@ -44,6 +42,13 @@ given ReadWriter[LocalDateTime] = {
     str => LocalDateTime.parse(str, dateTimeFormatter).nn
   )
 }
+
+///////// ReadWriter for Instant //////////
+
+given ReadWriter[Instant] = readwriter[(Long, Int)].bimap[Instant](
+  ins => (ins.getEpochSecond, ins.getNano),
+  p => Instant.ofEpochSecond(p._1, p._2)
+)
 
 //////// ReadWriter for ZoneId ////////
 

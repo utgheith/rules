@@ -11,9 +11,6 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.scalameta" %% "munit" % "1.1.0" % Test,
-  "com.lihaoyi" %% "os-lib" % "0.11.3" % Test,
-  "com.lihaoyi" %% "sourcecode" % "0.4.2" % Test,
-  "com.lihaoyi" %% "upickle" % "4.0.2" % Test
+  "org.scalameta" %% "munit" % "1.1.0" % Test
 )
 
